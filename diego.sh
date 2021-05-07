@@ -7,7 +7,7 @@ URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_curre
 URL_EPSON_DRIVER="http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-amd64/epson-inkjet-printer-201207w_1.0.0-1lsb3.2_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
 URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.8.1-linux1/GitHubDesktop-linux-2.8.1-linux1.deb"
-DIRETORIO_DOWNLOADS="$HOME/"
+DIRETORIO_DOWNLOADS="$HOME/temp"
 
 PROGRAMAS_PARA_INSTALAR=(
 
@@ -19,6 +19,7 @@ PROGRAMAS_PARA_INSTALAR=(
   gparted
   grsync
   grub-customizer
+  indicator-sound-switcher
   inxi
   lsb
   lsb-base
@@ -78,6 +79,7 @@ sudo rm /var/cache/apt/archives/lock
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
+sudo apt-add-repository ppa:yktooo/ppa -y  
 wget https://notion.davidbailey.codes/notion-linux.list
 sudo mv notion-linux.list /etc/apt/sources.list.d/notion-linux.list
 
@@ -94,14 +96,7 @@ sudo apt-get update -y
 echo " 
 INSTALANDO PACOTES APT
  "
-for nome_do_programa in ${PROGRAMAS_PARA_INSTALAR[@]}; do
-  if ! dpkg -l | grep -q $nome_do_programa; then # Só instala se já não estiver instalado
-    sudo apt-get install "$nome_do_programa" -y
-    echo "[INSTALADO] - $nome_do_programa"
-  else
-    echo "[JÁ ESTAVA INSTALADO] - $nome_do_programa"
-  fi
-done
+sudo apt-get install "$nome_do_programa" -y
 
 ## Download e instalaçao de programas externos ##
 echo " 
@@ -128,6 +123,9 @@ BUSCANDO POR PACOTES AUSENTES
 sudo apt-get update -y
 sudo apt-get install -f -y
 sudo apt-get upgrade -y
+sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+sudo apt autoremove -y
+rm -rf $DIRETORIO_DOWNLOADS
 
 ## Instalando pacotes Flatpak ##
 echo " 
