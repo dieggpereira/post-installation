@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ------------------------ COMANDO PARA RODAR ------------------------- #
-# ./diego.sh |& tee -a resultados.txt ---------------------------------- #
+# ./diego-autoremove.sh |& tee -a resultados.txt ---------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
@@ -96,8 +96,7 @@ sudo apt-get update -y
 echo " 
 INSTALANDO PACOTES APT
  "
-sudo apt-get install "$nome_do_programa" -y
-sudo apt autoremove "$nome_do_programa" -y 
+sudo apt -y install ${PROGRAMAS_PARA_INSTALAR[@]}
 
 ## Download e instalaçao de programas externos ##
 echo " 
