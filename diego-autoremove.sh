@@ -9,8 +9,7 @@ URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux
 URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.8.1-linux1/GitHubDesktop-linux-2.8.1-linux1.deb"
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
-PROGRAMAS_PARA_INSTALAR=(
-
+LISTA_APT=(
   cheese
   flatpak
   git-all
@@ -36,7 +35,22 @@ PROGRAMAS_PARA_INSTALAR=(
   transmission-gtk
   ubuntu-restricted-extras
   virtualbox
-  
+)
+LISTA_FLATPAK=(
+  com.spotify.Client
+  org.videolan.VLC
+  com.discordapp.Discord
+  us.zoom.Zoom
+  com.github.micahflee.torbrowser-launcher
+  org.telegram.desktop
+  com.obsproject.Studio
+  org.kde.kdenlive
+  org.onlyoffice.desktopeditors
+  com.skype.Client
+  com.github.johnfactotum.Foliate
+  io.typora.Typora
+  fr.handbrake.ghb
+  org.audacityteam.Audacity
 )
 # ---------------------------------------------------------------------- #
 
@@ -96,7 +110,7 @@ sudo apt-get update -y
 echo " 
 INSTALANDO PACOTES APT
  "
-sudo apt -y install ${PROGRAMAS_PARA_INSTALAR[@]}
+sudo apt -y install ${LISTA_APT[@]}
 
 ## Download e instalaçao de programas externos ##
 echo " 
@@ -133,9 +147,9 @@ INSTALANDO PACOTES FLATPAK
  "
 sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.spotify.Client org.videolan.VLC com.discordapp.Discord us.zoom.Zoom com.github.micahflee.torbrowser-launcher org.telegram.desktop com.obsproject.Studio org.kde.kdenlive org.onlyoffice.desktopeditors com.skype.Client com.github.johnfactotum.Foliate io.typora.Typora fr.handbrake.ghb org.audacityteam.Audacity -y
+flatpak install -y flathub ${LISTA_FLATPAK[@]}
 
-flatpak remove com.spotify.Client org.videolan.VLC com.discordapp.Discord us.zoom.Zoom com.github.micahflee.torbrowser-launcher org.telegram.desktop com.obsproject.Studio org.kde.kdenlive org.onlyoffice.desktopeditors com.skype.Client com.github.johnfactotum.Foliate io.typora.Typora fr.handbrake.ghb org.audacityteam.Audacity -y
+flatpak remove ${LISTA_FLATPAK[@]}
 
 ## Instalando pacotes Snap ##
 echo " 

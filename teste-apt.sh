@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
 LISTA=(
-  sl
-  neofetch
-  cheese
-  inxi
+  visualg
+  code 
 )
 
-sudo apt -y install ${LISTA[@]}
+sudo snap install ${LISTA[@]}
