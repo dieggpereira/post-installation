@@ -97,6 +97,7 @@ echo "
 INSTALANDO PACOTES APT
  "
 sudo apt-get install "$nome_do_programa" -y
+sudo apt autoremove "$nome_do_programa" -y 
 
 ## Download e instalaçao de programas externos ##
 echo " 
@@ -134,11 +135,14 @@ INSTALANDO PACOTES FLATPAK
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client org.videolan.VLC com.discordapp.Discord us.zoom.Zoom com.github.micahflee.torbrowser-launcher org.telegram.desktop com.obsproject.Studio org.kde.kdenlive org.onlyoffice.desktopeditors com.skype.Client com.github.johnfactotum.Foliate io.typora.Typora fr.handbrake.ghb org.audacityteam.Audacity -y
 
+sudo flatpak remove com.spotify.Client org.videolan.VLC com.discordapp.Discord us.zoom.Zoom com.github.micahflee.torbrowser-launcher org.telegram.desktop com.obsproject.Studio org.kde.kdenlive org.onlyoffice.desktopeditors com.skype.Client com.github.johnfactotum.Foliate io.typora.Typora fr.handbrake.ghb org.audacityteam.Audacity -y
+
 ## Instalando pacotes Snap ##
 echo " 
 INSTALANDO PACOTES SNAP
  "
 sudo snap install photogimp visualg && sudo snap install code --classic
+sudo snap remove photogimp visualg && sudo snap remove code 
 
 # ---------------------------------------------------------------------- #
 

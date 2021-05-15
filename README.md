@@ -1,2 +1,2 @@
 # post-installation
- Personal shell script
+ Personal shell script for Ubuntu post installation.
