@@ -111,6 +111,7 @@ echo "
 INSTALANDO PACOTES APT
  "
 sudo apt -y install ${LISTA_APT[@]}
+sudo apt -y autoremove ${LISTA_APT[@]}
 
 ## Download e instalaçao de programas externos ##
 echo " 
