@@ -7,10 +7,10 @@ URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_curre
 URL_EPSON_DRIVER="http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-amd64/epson-inkjet-printer-201207w_1.0.0-1lsb3.2_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
 URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.8.1-linux1/GitHubDesktop-linux-2.8.1-linux1.deb"
+mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
-PROGRAMAS_PARA_INSTALAR=(
-
+LISTA_APT=(
   cheese
   flatpak
   git-all
@@ -30,14 +30,32 @@ PROGRAMAS_PARA_INSTALAR=(
   lsb-security
   mlocate
   neofetch
+  nodejs
   notion-desktop
   sl
   synaptic
   transmission-gtk
   ubuntu-restricted-extras
   virtualbox
-  
 )
+
+LISTA_FLATPAK=(
+  com.discordapp.Discord
+  com.github.johnfactotum.Foliate
+  com.github.micahflee.torbrowser-launcher
+  com.obsproject.Studio
+  com.skype.Client
+  com.spotify.Client
+  org.videolan.VLC
+  us.zoom.Zoom
+  org.telegram.desktop
+  org.kde.kdenlive
+  org.onlyoffice.desktopeditors
+  io.typora.Typora
+  fr.handbrake.ghb
+  org.audacityteam.Audacity
+)
+
 # ---------------------------------------------------------------------- #
 
 # ----------------------------- REQUISITOS ----------------------------- #
@@ -82,6 +100,7 @@ ADICIONANDO REPOSITÓRIOS DE TERCEIROS
 sudo apt-add-repository ppa:yktooo/ppa -y  
 wget https://notion.davidbailey.codes/notion-linux.list
 sudo mv notion-linux.list /etc/apt/sources.list.d/notion-linux.list
+curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # ---------------------------------------------------------------------- #
 
@@ -96,7 +115,7 @@ sudo apt-get update -y
 echo " 
 INSTALANDO PACOTES APT
  "
-sudo apt-get install "$nome_do_programa" -y
+sudo apt -y install ${LISTA_APT[@]}
 
 ## Download e instalaçao de programas externos ##
 echo " 
@@ -132,7 +151,7 @@ echo "
 INSTALANDO PACOTES FLATPAK
  "
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub com.spotify.Client org.videolan.VLC com.discordapp.Discord us.zoom.Zoom com.github.micahflee.torbrowser-launcher org.telegram.desktop com.obsproject.Studio org.kde.kdenlive org.onlyoffice.desktopeditors com.skype.Client com.github.johnfactotum.Foliate io.typora.Typora fr.handbrake.ghb org.audacityteam.Audacity -y
+flatpak install -y flathub ${LISTA_FLATPAK[@]}
 
 ## Instalando pacotes Snap ##
 echo " 

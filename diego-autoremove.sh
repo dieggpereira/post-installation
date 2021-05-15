@@ -150,7 +150,7 @@ sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub ${LISTA_FLATPAK[@]}
 
-flatpak remove ${LISTA_FLATPAK[@]}
+flatpak remove -y ${LISTA_FLATPAK[@]}
 
 ## Instalando pacotes Snap ##
 echo " 
