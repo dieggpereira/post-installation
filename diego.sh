@@ -46,14 +46,15 @@ LISTA_FLATPAK=(
   com.obsproject.Studio
   com.skype.Client
   com.spotify.Client
-  org.videolan.VLC
-  us.zoom.Zoom
-  org.telegram.desktop
+  fr.handbrake.ghb
+  io.typora.Typora
+  org.audacityteam.Audacity
   org.kde.kdenlive
   org.onlyoffice.desktopeditors
-  io.typora.Typora
-  fr.handbrake.ghb
-  org.audacityteam.Audacity
+  org.qgis.qgis
+  org.telegram.desktop
+  org.videolan.VLC 
+  us.zoom.Zoom
 )
 
 # ---------------------------------------------------------------------- #
