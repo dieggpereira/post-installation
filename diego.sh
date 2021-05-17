@@ -61,6 +61,13 @@ LISTA_FLATPAK=(
 
 # ----------------------------- REQUISITOS ----------------------------- #
 
+## Removendo travas eventuais do apt ##
+echo " 
+REMOVENDO TRAVAS DO APT
+ "
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/cache/apt/archives/lock
+
 ## Atualizando o repositório ##
 
 echo " 
@@ -86,13 +93,6 @@ gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
 gsettings set org.gnome.desktop.session idle-delay 0
-
-## Removendo travas eventuais do apt ##
-echo " 
-REMOVENDO TRAVAS DO APT
- "
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/cache/apt/archives/lock
 
 ## Adicionando repositórios de terceiros##
 echo " 
