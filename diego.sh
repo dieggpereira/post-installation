@@ -30,6 +30,7 @@ LISTA_APT=(
   lsb-release
   lsb-security
   mlocate
+  ncdu
   neofetch
   nodejs
   notion-desktop
