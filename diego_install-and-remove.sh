@@ -146,7 +146,7 @@ rm -rf $DIRETORIO_DOWNLOADS
 echo " 
 INSTALANDO PACOTES FLATPAK
  "
-sudo apt install flatpak
+sudo apt install -y flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub ${LISTA_FLATPAK[@]}
 
