@@ -43,6 +43,7 @@ LISTA_APT=(
 
 LISTA_FLATPAK=(
   com.discordapp.Discord
+  com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
   com.github.micahflee.torbrowser-launcher
   com.obsproject.Studio
