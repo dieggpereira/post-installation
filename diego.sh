@@ -49,6 +49,7 @@ LISTA_FLATPAK=(
   com.obsproject.Studio
   com.skype.Client
   com.spotify.Client
+  com.uploadedlobster.peek
   fr.handbrake.ghb
   io.typora.Typora
   org.audacityteam.Audacity
