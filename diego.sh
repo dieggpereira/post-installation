@@ -39,6 +39,7 @@ LISTA_APT=(
   transmission-gtk
   ubuntu-restricted-extras
   virtualbox
+  xarchiver
 )
 
 LISTA_FLATPAK=(
