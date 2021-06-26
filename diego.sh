@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ------------------------ COMANDO PARA RODAR ------------------------- #
-# ./diego.sh |& tee -a resultados.txt ---------------------------------- #
+# ./diego.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
@@ -78,13 +78,13 @@ sudo rm /var/cache/apt/archives/lock
 echo " 
 ATUALIZANDO OS REPOSITÓRIOS
  "
-sudo apt-get update -y
+sudo apt update -y
 
 ## Atualizando os pacotes ##
 echo " 
 ATUALIZANDO OS PACOTES
  "
-sudo apt-get upgrade -y
+sudo apt upgrade -y
 sudo apt autoremove -y
 
 ## Ajustando tema ##
