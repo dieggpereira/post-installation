@@ -115,7 +115,7 @@ curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 echo " 
 ATUALIZANDO OS REPOSITÓRIOS
  "
-sudo apt-get update -y
+sudo apt update -y
 
 # Instalar programas no apt
 echo " 
@@ -146,9 +146,9 @@ sudo ./*.run
 echo " 
 BUSCANDO POR PACOTES AUSENTES
  "
-sudo apt-get update -y
-sudo apt-get install -f -y
-sudo apt-get upgrade -y
+sudo apt update -y
+sudo apt install -f -y
+sudo apt upgrade -y
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 sudo apt autoremove -y
 rm -rf $DIRETORIO_DOWNLOADS
@@ -173,10 +173,10 @@ sudo snap install photogimp visualg && sudo snap install code --classic
 echo " 
 FINALIZANDO INSTALAÇÃO E LIMPANDO O SISTEMA
  "
-sudo apt-get update && sudo apt-get dist-upgrade -y
+sudo apt update && sudo apt dist-upgrade -y
 flatpak update -y
-sudo apt-get autoclean
-sudo apt-get autoremove -y
+sudo apt autoclean
+sudo apt autoremove -y
 echo " 
 O COMPUTADOR SERÁ REINICIADO
  "
