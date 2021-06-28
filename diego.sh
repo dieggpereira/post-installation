@@ -39,6 +39,7 @@ LISTA_APT=(
   transmission-gtk
   ubuntu-restricted-extras
   virtualbox
+  woeusb-frontend-wxgtk
   xarchiver
 )
 
@@ -103,6 +104,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
+sudo add-apt-repository ppa:tomtomtom/woeusb -y
 sudo apt-add-repository ppa:yktooo/ppa -y  
 wget https://notion.davidbailey.codes/notion-linux.list
 sudo mv notion-linux.list /etc/apt/sources.list.d/notion-linux.list
