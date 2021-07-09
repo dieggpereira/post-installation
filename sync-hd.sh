@@ -1,13 +1,46 @@
 #!/usr/bin/env bash
-echo " 
-Sincronizando Documentos.
- "
+echo -e "\e[1;33m 
+>>>>>>>>>>>>>>>>>>> Sincronizando Documentos. <<<<<<<<<<<<<<<<<<<
+\e[0m "
 rsync -r -t -v --progress --delete -s /home/diego/Documents /media/diego/"Diego 1 TB"/Diego/Backup/
-echo " 
-Sincronizando Filmes.
- "
+if [[ $? -gt 0 ]] 
+then
+   echo -e "\e[1;31m  
+>>>>>>>>>>>>>>>>>>>>>> Documentos: Falhou. <<<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+else
+   rm -rf rm /home/pi/queue/*
+   echo -e "\e[1;32m  
+>>>>>>>>>>>>>>>>>>>>> Documentos: Sucesso. <<<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+fi
+echo -e "\e[1;33m 
+>>>>>>>>>>>>>>>>>>>>> Sincronizando Filmes. <<<<<<<<<<<<<<<<<<<<<
+\e[0m "
 rsync -r -t -v --progress -s /home/diego/Vidéos/Filmes /media/diego/"Diego 1 TB"/Diego
-echo " 
-Sincronizando Imagens.
- "
+if [[ $? -gt 0 ]] 
+then
+   echo -e "\e[1;31m  
+>>>>>>>>>>>>>>>>>>>>>>>> Filmes: Falhou. <<<<<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+else
+   rm -rf rm /home/pi/queue/*
+   echo -e "\e[1;32m  
+>>>>>>>>>>>>>>>>>>>>>>>> Filmes: Sucesso. <<<<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+fi
+echo -e "\e[1;33m 
+>>>>>>>>>>>>>>>>>>>>> Sincronizando Imagens. <<<<<<<<<<<<<<<<<<<<
+\e[0m "
 rsync -r -t -v --progress -s /home/diego/Images /media/diego/"Diego 1 TB"/Diego/Backup
+if [[ $? -gt 0 ]] 
+then
+   echo -e "\e[1;31m  
+>>>>>>>>>>>>>>>>>>>>>>> Imagens: Falhou. <<<<<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+else
+   rm -rf rm /home/pi/queue/*
+   echo -e "\e[1;32m  
+>>>>>>>>>>>>>>>>>>>>>>> Imagens: Sucesso. <<<<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+fi
