@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-echo " 
+echo -e "\e[1;33m  
 *********** ATUALIZANDO O SISTEMA ***********
- "
+\e[0m "
 sudo apt-get update
 echo ""
 sudo apt-get dist-upgrade -y
@@ -14,7 +14,7 @@ echo ""
 sudo apt-get autoclean
 echo ""
 sudo apt-get autoremove -y
-echo " 
+echo -e "\e[1;32m 
 *********** O COMPUTADOR ESTÁ ATUALIZADO ***********
- "
+\e[0m "
 # ---------------------------------------------------------------------- #
