@@ -9,6 +9,18 @@ echo -e "\e[1;33m
 
 sudo apt-get update
 
+if [[ $? -gt 0 ]] 
+then
+echo -e "\e[1;31m  
+>>>>>>>>>>>>>>>>>>>>> Repositórios: Falhou. <<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+else
+rm -rf rm /home/pi/queue/*
+echo -e "\e[1;32m  
+>>>>>>>>>>>>>>>>>>>>> Repositórios: Sucesso. <<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+fi
+
 sudo apt-get dist-upgrade -y
 
 if [[ $? -gt 0 ]] 
@@ -80,7 +92,7 @@ else
 >>>>>>>>>>>>>>>>>>>>> Autoremove: Sucesso. <<<<<<<<<<<<<<<<<<<<<<
 \e[0m    "
 fi
-echo -e "\e[1;32m 
+echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Fim <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 \e[0m "
 # ---------------------------------------------------------------------- #
