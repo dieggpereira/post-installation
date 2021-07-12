@@ -34,6 +34,7 @@ LISTA_APT=(
   neofetch
   nodejs
   notion-desktop
+  onlyoffice-desktopeditors
   sl
   synaptic
   transmission-gtk
@@ -56,7 +57,6 @@ LISTA_FLATPAK=(
   io.typora.Typora
   org.audacityteam.Audacity
   org.kde.kdenlive
-  org.onlyoffice.desktopeditors
   org.qgis.qgis
   org.telegram.desktop
   org.videolan.VLC 
@@ -109,6 +109,9 @@ sudo apt-add-repository ppa:yktooo/ppa -y
 wget https://notion.davidbailey.codes/notion-linux.list
 sudo mv notion-linux.list /etc/apt/sources.list.d/notion-linux.list
 curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
+echo "deb https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee -a /etc/apt/sources.list
 
 # ---------------------------------------------------------------------- #
 

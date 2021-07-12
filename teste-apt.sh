@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
 
-LISTA=(
-  visualg
-  code 
-)
-
-sudo snap install ${LISTA[@]}
+echo "teste vai dar merda" | sudo tee -a /etc/apt/sources.list
