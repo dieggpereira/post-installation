@@ -21,7 +21,7 @@ echo -e "\e[1;32m
 \e[0m    "
 fi
 
-sudo apt-get dist-upgrade -y
+sudo apt-get upgrade -y
 
 if [[ $? -gt 0 ]] 
 then
