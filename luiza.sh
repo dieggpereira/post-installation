@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ------------------------ COMANDO PARA RODAR ------------------------- #
-# ./diego.sh |& tee -a resultados.txt --------------------------------- #
+# sudo chmod +x luiza.sh && sudo ./luiza.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
@@ -75,12 +75,6 @@ echo "Nenhuma mudança efetuada."
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
-sudo add-apt-repository ppa:tomtomtom/woeusb -y
-sudo apt-add-repository ppa:yktooo/ppa -y  
-wget https://notion.davidbailey.codes/notion-linux.list
-sudo mv notion-linux.list /etc/apt/sources.list.d/notion-linux.list
-curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
 echo "deb https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee -a /etc/apt/sources.list
 
@@ -105,11 +99,7 @@ DOWNLOAD DE PACOTES EXTERNOS
  "
 cd "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_EPSON_DRIVER"        -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GITHUB_DESKTOP"      -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_4K_DOWNLOADER"       -P "$DIRETORIO_DOWNLOADS"
-tar -vzxf *.tar.gz
+
 
 ## Instalando pacotes .deb e .run baixados na sessão anterior ##
 echo " 
@@ -140,7 +130,7 @@ flatpak install -y flathub ${LISTA_FLATPAK[@]}
 echo " 
 INSTALANDO PACOTES SNAP
  "
-sudo snap install photogimp visualg && sudo snap install code --classic
+echo "Nenhum pacote especificado."
 
 # ---------------------------------------------------------------------- #
 
