@@ -75,6 +75,7 @@ echo "Nenhuma mudança efetuada."
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
+sudo apt-add-repository ppa:yktooo/ppa -y  
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
 echo "deb https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee -a /etc/apt/sources.list
 
@@ -106,8 +107,7 @@ echo "
 INSTALANDO PACOTES EXTERNOS
  "
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
-chmod +x *.run
-sudo ./*.run
+
 ## Corrigindo possíveis erros até aqui ##
 echo " 
 BUSCANDO POR PACOTES AUSENTES
