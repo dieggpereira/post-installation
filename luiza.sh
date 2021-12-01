@@ -130,7 +130,7 @@ flatpak install -y flathub ${LISTA_FLATPAK[@]}
 echo " 
 INSTALANDO PACOTES SNAP
  "
-echo "Nenhum pacote especificado."
+sudo snap install opera
 
 # ---------------------------------------------------------------------- #
 
