@@ -71,7 +71,7 @@ AJUSTANDO TEMA
  "
 echo "Nenhuma mudança efetuada."
 
-## Adicionando repositórios de terceiros##
+## Adicionando repositórios de terceiros ##
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
