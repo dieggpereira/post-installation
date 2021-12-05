@@ -2,7 +2,7 @@
 echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>> Sincronizando Documentos. <<<<<<<<<<<<<<<<<<<
 \e[0m "
-rsync -r -t -v --progress --delete -s /home/diego/Documents /media/diego/"Diego 64 GB"
+rsync -r -t -v --progress --delete -s -h /home/diego/Documents /media/diego/"Diego 64 GB"
 if [[ $? -gt 0 ]] 
 then
    echo -e "\e[1;31m  
@@ -17,7 +17,7 @@ fi
 echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>>>> Sincronizando Imagens. <<<<<<<<<<<<<<<<<<<<
 \e[0m "
-rsync -r -t -v --progress -s /home/diego/Images /media/diego/"Diego 64 GB"
+rsync -r -t -v --progress -s -h /home/diego/Images /media/diego/"Diego 64 GB"
 if [[ $? -gt 0 ]] 
 then
    echo -e "\e[1;31m  
