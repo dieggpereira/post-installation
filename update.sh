@@ -1,4 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env 
+echo -e "\e[1;33m
+REMOVENDO TRAVAS DO APT
+\e[0m "
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/cache/apt/archives/lock
+
 echo -e "\e[1;33m  
 >>>>>>>>>>>>>>>>>>>>> ATUALIZANDO O SISTEMA <<<<<<<<<<<<<<<<<<<<<
 \e[0m "
@@ -7,7 +13,7 @@ echo -e "\e[1;33m
 >>>>>>>>>>>>>>>>>>>> Atualizando pacotes APT <<<<<<<<<<<<<<<<<<<<
 \e[0m "
 
-sudo apt-get update
+sudo apt update
 
 if [[ $? -gt 0 ]] 
 then
@@ -21,7 +27,7 @@ echo -e "\e[1;32m
 \e[0m    "
 fi
 
-sudo apt-get upgrade -y
+sudo apt dist-upgrade -y
 
 if [[ $? -gt 0 ]] 
 then
