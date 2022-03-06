@@ -15,7 +15,6 @@ else
 \e[0m    "
 fi
 
-echo -e "\e[1;34m
+echo -e "\e[1;34m 
 Concluído em: $(date +%T). \e[0m"
 echo " "
-fi
