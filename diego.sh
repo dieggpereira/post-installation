@@ -54,13 +54,13 @@ LISTA_FLATPAK=(
   com.obsproject.Studio
   com.skype.Client
   com.spotify.Client
+  com.sweethome3d.Sweethome3d
   com.uploadedlobster.peek
   fr.handbrake.ghb
   io.typora.Typora
   org.audacityteam.Audacity
   org.kde.kdenlive
   org.qgis.qgis/x86_64/lts
-  org.telegram.desktop
   org.videolan.VLC 
   us.zoom.Zoom
 )
@@ -171,7 +171,7 @@ flatpak install -y flathub ${LISTA_FLATPAK[@]}
 echo " 
 INSTALANDO PACOTES SNAP
  "
-sudo snap install photogimp visualg && sudo snap install code --classic
+sudo snap install photogimp telegram-desktop visualg && sudo snap install code --classic
 
 # ---------------------------------------------------------------------- #
 
