@@ -87,7 +87,7 @@ sudo apt update -y
 echo " 
 ATUALIZANDO OS PACOTES
  "
-sudo apt upgrade -y
+sudo apt dist-upgrade -y
 sudo apt autoremove -y
 sudo apt install curl
 
