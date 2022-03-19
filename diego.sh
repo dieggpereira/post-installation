@@ -89,6 +89,7 @@ ATUALIZANDO OS PACOTES
  "
 sudo apt upgrade -y
 sudo apt autoremove -y
+sudo apt install curl
 
 ## Ajustando tema ##
 echo " 
