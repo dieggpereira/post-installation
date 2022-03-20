@@ -63,7 +63,13 @@ LISTA_FLATPAK=(
   org.videolan.VLC 
   us.zoom.Zoom
 )
-
+LISTA_SNAP=(
+  code --classic
+  indicator-sound-switcher
+  photogimp
+  telegram-desktop
+  visualg
+)
 # ---------------------------------------------------------------------- #
 
 # ----------------------------- REQUISITOS ----------------------------- #
@@ -169,7 +175,7 @@ flatpak install -y flathub ${LISTA_FLATPAK[@]}
 echo " 
 INSTALANDO PACOTES SNAP
  "
-sudo snap install photogimp telegram-desktop visualg indicator-sound-switcher && sudo snap install code --classic
+sudo snap install ${LISTA_SNAP[@]}
 
 # ---------------------------------------------------------------------- #
 
