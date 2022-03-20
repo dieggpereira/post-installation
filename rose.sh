@@ -132,7 +132,7 @@ flatpak install -y flathub ${LISTA_FLATPAK[@]}
 echo " 
 INSTALANDO PACOTES SNAP
  "
-sudo snap install photogimp telegram-desktop visualg && sudo snap install code --classic
+sudo snap install code --classic
 
 # ---------------------------------------------------------------------- #
 
