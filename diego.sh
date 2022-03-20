@@ -6,8 +6,8 @@
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_EPSON_DRIVER="http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-amd64/epson-inkjet-printer-201207w_1.0.0-1lsb3.2_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
-URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.8.1-linux1/GitHubDesktop-linux-2.8.1-linux1.deb"
-URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.15.1-1_amd64.deb"
+URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.9.9-linux2/GitHubDesktop-linux-2.9.9-linux2.deb"
+URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.20.0-1_amd64.deb"
 mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
