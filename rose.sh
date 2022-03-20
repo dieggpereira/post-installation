@@ -11,13 +11,10 @@ mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
-  cheese
   flatpak
-  git-all
   gnome-software-plugin-flatpak
   gnome-tweaks
   gparted
-  grsync
   grub-customizer
   indicator-sound-switcher
   inxi
@@ -28,19 +25,11 @@ LISTA_APT=(
   lsb-printing
   lsb-release
   lsb-security
-  mlocate
   ncdu
   neofetch
-  nodejs
-  notion-app
-  onlyoffice-desktopeditors
   sl
   synaptic
-  transmission-gtk
   ubuntu-restricted-extras
-  virtualbox
-  woeusb-frontend-wxgtk
-  xarchiver
 )
 
 LISTA_FLATPAK=(
