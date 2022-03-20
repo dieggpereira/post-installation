@@ -11,6 +11,7 @@ mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
+  anydesk
   flatpak
   gnome-software-plugin-flatpak
   gnome-tweaks
@@ -78,7 +79,11 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-tim
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # ---------------------------------------------------------------------- #
-
+echo " 
+ADICIONANDO REPOSITÓRIOS DE TERCEIROS
+ "
+sudo wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
 # ----------------------------- EXECUÇÃO ----------------------------- #
 ## Atualizando o repositório depois da adição de novos repositórios ##
 echo " 
