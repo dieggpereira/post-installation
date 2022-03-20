@@ -35,6 +35,8 @@ LISTA_APT=(
   nodejs
   notion-app
   onlyoffice-desktopeditors
+  papirus-folders
+  papirus-icon-theme
   sl
   synaptic
   transmission-gtk
@@ -120,7 +122,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
 echo "deb https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee -a /etc/apt/sources.list
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
-echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.
+sudo add-apt-repository ppa:papirus/papirus
 
 # ---------------------------------------------------------------------- #
 
