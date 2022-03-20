@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ------------------------ COMANDO PARA RODAR ------------------------- #
-# ./diego.sh |& tee -a resultados.txt --------------------------------- #
+# sudo ./rose.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
