@@ -33,22 +33,8 @@ LISTA_APT=(
 )
 
 LISTA_FLATPAK=(
-  com.discordapp.Discord
-  com.github.donadigo.appeditor
-  com.github.jeromerobert.pdfarranger
-  com.github.johnfactotum.Foliate
-  com.github.micahflee.torbrowser-launcher
   com.microsoft.Teams
-  com.obsproject.Studio
   com.skype.Client
-  com.spotify.Client
-  com.sweethome3d.Sweethome3d
-  com.uploadedlobster.peek
-  fr.handbrake.ghb
-  io.typora.Typora
-  org.audacityteam.Audacity
-  org.kde.kdenlive
-  org.qgis.qgis/x86_64/lts
   org.videolan.VLC 
   us.zoom.Zoom
 )
@@ -90,17 +76,6 @@ gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
 gsettings set org.gnome.desktop.session idle-delay 0
-
-## Adicionando repositórios de terceiros##
-echo " 
-ADICIONANDO REPOSITÓRIOS DE TERCEIROS
- "
-sudo add-apt-repository ppa:tomtomtom/woeusb -y
-sudo apt-add-repository ppa:yktooo/ppa -y 
-curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
-echo "deb https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee -a /etc/apt/sources.list
-echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 
 # ---------------------------------------------------------------------- #
 
