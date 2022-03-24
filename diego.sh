@@ -71,7 +71,7 @@ LISTA_SNAP=(
   indicator-sound-switcher
   photogimp
   telegram-desktop
-  visualg
+  utm-no
 )
 # ---------------------------------------------------------------------- #
 
