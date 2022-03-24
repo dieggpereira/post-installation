@@ -7,7 +7,7 @@ echo -e "\e[1;33m
 >>>>>>>>>>>>>>>>>>>> Atualizando pacotes APT <<<<<<<<<<<<<<<<<<<<
 \e[0m "
 
-sudo apt-get update
+sudo apt update
 
 if [[ $? -gt 0 ]] 
 then
@@ -21,7 +21,7 @@ echo -e "\e[1;32m
 \e[0m    "
 fi
 
-sudo apt-get upgrade -y
+sudo apt dist-upgrade -y
 
 if [[ $? -gt 0 ]] 
 then
