@@ -13,6 +13,7 @@ DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
   anydesk
+  audio-recorder
   cheese
   flatpak
   git-all
@@ -115,6 +116,7 @@ gsettings set org.gnome.desktop.session idle-delay 0
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
+sudo add-apt-repository ppa:audio-recorder
 sudo add-apt-repository ppa:tomtomtom/woeusb -y
 sudo apt-add-repository ppa:yktooo/ppa -y 
 curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
