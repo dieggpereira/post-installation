@@ -1,4 +1,4 @@
-#!/usr/bin/env 
+#!/usr/bin/env bash
 echo -e "\e[1;33m
 REMOVENDO TRAVAS DO APT
 \e[0m "
