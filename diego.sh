@@ -48,10 +48,10 @@ LISTA_APT=(
 
 LISTA_FLATPAK=(
   com.discordapp.Discord
-  com.github.donadigo.appeditor
   com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
   com.github.micahflee.torbrowser-launcher
+  com.github.tchx84.Flatseal
   com.google.Chrome
   com.microsoft.Teams
   com.obsproject.Studio
@@ -62,6 +62,7 @@ LISTA_FLATPAK=(
   fr.handbrake.ghb
   io.typora.Typora
   org.audacityteam.Audacity
+  org.bluesabre.MenuLibre
   org.kde.kdenlive
   org.qgis.qgis/x86_64/lts
   org.videolan.VLC 
