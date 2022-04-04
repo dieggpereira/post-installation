@@ -3,7 +3,6 @@
 # sudo ./rose.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
-URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_EPSON_DRIVER="http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-amd64/epson-inkjet-printer-201207w_1.0.0-1lsb3.2_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
 URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.20.0-1_amd64.deb"
@@ -34,6 +33,7 @@ LISTA_APT=(
 )
 
 LISTA_FLATPAK=(
+  com.google.Chrome
   com.microsoft.Teams
   com.skype.Client
   org.videolan.VLC 
@@ -103,7 +103,6 @@ echo "
 DOWNLOAD DE PACOTES EXTERNOS
  "
 cd      "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_EPSON_DRIVER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_4K_DOWNLOADER"       -P "$DIRETORIO_DOWNLOADS"

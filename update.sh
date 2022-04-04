@@ -1,9 +1,21 @@
 #!/usr/bin/env bash
 echo -e "\e[1;33m
-REMOVENDO TRAVAS DO APT
+>>>>>>>>>>>>>>>>>>>> REMOVENDO TRAVAS DO APT <<<<<<<<<<<<<<<<<<<<
 \e[0m "
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
+
+if [[ $? -gt 0 ]] 
+then
+echo -e "\e[1;31m  
+>>>>>>>>>>>>>>>>>>> Remover travas: Falhou. <<<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+else
+rm -rf rm /home/pi/queue/*
+echo -e "\e[1;32m  
+>>>>>>>>>>>>>>>>>>> Remover travas: Sucesso. <<<<<<<<<<<<<<<<<<<<
+\e[0m    "
+fi
 
 echo -e "\e[1;33m  
 >>>>>>>>>>>>>>>>>>>>> ATUALIZANDO O SISTEMA <<<<<<<<<<<<<<<<<<<<<

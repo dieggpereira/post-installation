@@ -3,7 +3,6 @@
 # sudo ./diego.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
-URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_EPSON_DRIVER="http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-amd64/epson-inkjet-printer-201207w_1.0.0-1lsb3.2_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
 URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.9.12-linux3/GitHubDesktop-linux-2.9.12-linux3.deb"
@@ -53,6 +52,7 @@ LISTA_FLATPAK=(
   com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
   com.github.micahflee.torbrowser-launcher
+  com.google.Chrome
   com.microsoft.Teams
   com.obsproject.Studio
   com.skype.Client
@@ -147,7 +147,6 @@ echo "
 DOWNLOAD DE PACOTES EXTERNOS
  "
 cd      "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_EPSON_DRIVER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_GITHUB_DESKTOP"      -P "$DIRETORIO_DOWNLOADS"
