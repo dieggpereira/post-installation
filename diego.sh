@@ -3,6 +3,7 @@
 # sudo ./diego.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
+URL_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_EPSON_DRIVER="http://download.ebz.epson.net/dsc/op/stable/debian/dists/lsb3.2/main/binary-amd64/epson-inkjet-printer-201207w_1.0.0-1lsb3.2_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
 URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.9.12-linux3/GitHubDesktop-linux-2.9.12-linux3.deb"
@@ -11,7 +12,6 @@ mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
-  anydesk
   audio-recorder
   cheese
   flatpak
@@ -20,7 +20,6 @@ LISTA_APT=(
   gnome-tweaks
   gparted
   grsync
-  grub-customizer
   inxi
   lsb
   lsb-base
@@ -34,15 +33,11 @@ LISTA_APT=(
   neofetch
   nodejs
   notion-app
-  onlyoffice-desktopeditors
-  papirus-folders
   papirus-icon-theme
   sl
   synaptic
   transmission-gtk
   ubuntu-restricted-extras
-  virtualbox
-  woeusb-frontend-wxgtk
   xarchiver
 )
 
@@ -52,10 +47,8 @@ LISTA_FLATPAK=(
   com.github.johnfactotum.Foliate
   com.github.micahflee.torbrowser-launcher
   com.github.tchx84.Flatseal
-  com.google.Chrome
   com.microsoft.Teams
   com.obsproject.Studio
-  com.skype.Client
   com.spotify.Client
   com.sweethome3d.Sweethome3d
   com.uploadedlobster.peek
@@ -64,7 +57,6 @@ LISTA_FLATPAK=(
   org.audacityteam.Audacity
   org.bluesabre.MenuLibre
   org.kde.kdenlive
-  org.qgis.qgis/x86_64/lts
   org.videolan.VLC 
   us.zoom.Zoom
 )
@@ -101,32 +93,14 @@ sudo apt dist-upgrade -y
 sudo apt autoremove -y
 sudo apt install curl
 
-## Ajustando tema ##
-echo " 
-AJUSTANDO TEMA
- "
-gsettings set org.gnome.desktop.interface gtk-theme "Yaru-dark"
-gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 30
-gsettings set org.gnome.shell.extensions.dash-to-dock autohide 'true'
-gsettings set org.gnome.desktop.interface show-battery-percentage 'true'
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
-gsettings set org.gnome.desktop.session idle-delay 0
-
 ## Adicionando repositórios de terceiros##
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
-sudo add-apt-repository ppa:audio-recorder
-sudo add-apt-repository ppa:tomtomtom/woeusb -y
-sudo apt-add-repository ppa:yktooo/ppa -y 
+sudo add-apt-repository ppa:audio-recorder -y
 curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
-echo "deb https://download.onlyoffice.com/repo/debian squeeze main" | sudo tee -a /etc/apt/sources.list
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
-echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
-sudo add-apt-repository ppa:papirus/papirus
+sudo add-apt-repository ppa:papirus/papirus -y
 
 # ---------------------------------------------------------------------- #
 
@@ -148,6 +122,7 @@ echo "
 DOWNLOAD DE PACOTES EXTERNOS
  "
 cd      "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_CHROME"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_EPSON_DRIVER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_GITHUB_DESKTOP"      -P "$DIRETORIO_DOWNLOADS"
