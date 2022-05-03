@@ -41,6 +41,7 @@ LISTA_APT=(
 )
 
 LISTA_FLATPAK=(
+  com.anydesk.Anydesk
   com.discordapp.Discord
   com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
