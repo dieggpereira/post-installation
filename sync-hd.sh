@@ -41,7 +41,11 @@ then
 else
    rm -rf rm /home/pi/queue/*
    echo -e "\e[1;32m  
->>>>>>>>>>>>>>>>>>>>>>> Imagens: Sucesso. <<<<<<<<<<<<<<<<<<<<<<< \e[0m    "
+>>>>>>>>>>>>>>>>>>>>>>> Imagens: Sucesso. <<<<<<<<<<<<<<<<<<<<<<< 
+\e[0m    "
+echo -e "\e[1;33m 
+>>>>>>>>>>>>>>>>>>> Finalizando transferências. <<<<<<<<<<<<<<<<< \e[0m "
+sync
 echo -e "\e[1;34m 
 Concluído em: $(date +%T). \e[0m"
 echo " "
