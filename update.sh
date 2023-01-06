@@ -85,6 +85,7 @@ fi
 echo -e "\e[1;33m  
 >>>>>>>>>>>>>>>>>>>>>> Limpando o sistema <<<<<<<<<<<<<<<<<<<<<<<
 \e[0m "
+rm /home/diego/Images/Captures\ d’écran/*.png ## Apaga as capturas de tela salvas na memória do computador
 sudo apt-get autoclean
 if [[ $? -gt 0 ]] 
 then
