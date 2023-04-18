@@ -5,8 +5,8 @@
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
-URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-2.9.15-linux1/GitHubDesktop-linux-2.9.15-linux1.deb"
-URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.20.2-1_amd64.deb"
+URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-3.2.1-linux1/GitHubDesktop-linux-3.2.1-linux1.deb"
+URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.24.1-1_amd64.deb"
 mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
@@ -28,6 +28,7 @@ LISTA_APT=(
   lsb-release
   lsb-security
   mlocate
+  nala
   ncdu
   neofetch
   nodejs
@@ -37,31 +38,35 @@ LISTA_APT=(
   synaptic
   transmission-gtk
   ubuntu-restricted-extras
+  virtualbox
   xarchiver
 )
 
 LISTA_FLATPAK=(
+  br.gov.fazenda.receita.irpf
   com.anydesk.Anydesk
+  com.belmoussaoui.Decoder
+  com.bitwarden.desktop
   com.discordapp.Discord
   com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
   com.github.micahflee.torbrowser-launcher
   com.github.tchx84.Flatseal
-  com.microsoft.Teams
   com.obsproject.Studio
   com.spotify.Client
   com.sweethome3d.Sweethome3d
+  com.todoist.Todoist
   com.uploadedlobster.peek
   fr.handbrake.ghb
-  io.typora.Typora
+  io.gitlab.theevilskeleton.Upscaler
   org.audacityteam.Audacity
   org.bluesabre.MenuLibre
   org.kde.kdenlive
-  org.videolan.VLC 
-  us.zoom.Zoom
+  org.videolan.VLC
 )
 
 LISTA_SNAP=(
+  fast
   indicator-sound-switcher
   photogimp
   telegram-desktop
