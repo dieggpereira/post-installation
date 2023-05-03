@@ -5,7 +5,6 @@
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
-URL_GITHUB_DESKTOP="https://github.com/shiftkey/desktop/releases/download/release-3.2.1-linux1/GitHubDesktop-linux-3.2.1-linux1.deb"
 URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.24.1-1_amd64.deb"
 mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
@@ -58,6 +57,7 @@ LISTA_FLATPAK=(
   com.todoist.Todoist
   com.uploadedlobster.peek
   fr.handbrake.ghb
+  io.github.shiftey.Desktop
   io.gitlab.theevilskeleton.Upscaler
   org.audacityteam.Audacity
   org.bluesabre.MenuLibre
@@ -129,7 +129,6 @@ DOWNLOAD DE PACOTES EXTERNOS
 cd      "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CHROME"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GITHUB_DESKTOP"      -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_4K_DOWNLOADER"       -P "$DIRETORIO_DOWNLOADS"
 tar -vzxf *.tar.gz
 
