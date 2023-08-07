@@ -2,7 +2,7 @@
 echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>> Sincronizando Documentos. <<<<<<<<<<<<<<<<<<<
 \e[0m "
-rsync -r -t -v --progress --delete -s -h /home/diego/Documents /media/diego/"Diego 1 TB"/Diego/"Backup Diego"
+rsync -rtvsh --progress --delete /home/diego/Documents /media/diego/"Diego 1 TB"/Diego/"Backup Diego"
 if [[ $? -gt 0 ]] 
 then
    echo -e "\e[1;31m  
@@ -17,7 +17,7 @@ fi
 echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>>>> Sincronizando Filmes. <<<<<<<<<<<<<<<<<<<<<
 \e[0m "
-rsync -r -t -v --progress -s -h /home/diego/Vidéos/Filmes /media/diego/"Diego 1 TB"/Diego
+rsync -rtvsh --progress /home/diego/Vidéos/Filmes /media/diego/"Diego 1 TB"/Diego
 if [[ $? -gt 0 ]] 
 then
    echo -e "\e[1;31m  
@@ -32,7 +32,7 @@ fi
 echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>>>> Sincronizando Imagens. <<<<<<<<<<<<<<<<<<<<
 \e[0m "
-rsync -r -t -v --progress --delete -s -h /home/diego/Images /media/diego/"Diego 1 TB"/Diego/"Backup Diego"
+rsync -rtvsh --progress --delete /home/diego/Images /media/diego/"Diego 1 TB"/Diego/"Backup Diego"
 if [[ $? -gt 0 ]] 
 then
    echo -e "\e[1;31m  
