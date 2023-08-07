@@ -32,7 +32,7 @@ fi
 echo -e "\e[1;33m 
 >>>>>>>>>>>>>>>>>>>>> Sincronizando Imagens. <<<<<<<<<<<<<<<<<<<<
 \e[0m "
-rsync -rtvsh --progress --delete /home/diego/Images /media/diego/"Diego 1 TB"/Diego/"Backup Diego"
+rsync -rtvsh --progress --delete --exclude 'Captures d’écran' /home/diego/Images /media/diego/"Diego 1 TB"/Diego/"Backup Diego"
 if [[ $? -gt 0 ]] 
 then
    echo -e "\e[1;31m  
