@@ -4,20 +4,17 @@
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
-URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.24.1-1_amd64.deb"
+# URL_FOXIT_READER="https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz"
+# URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.24.1-1_amd64.deb"
 mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
-  audio-recorder
   cheese
   flatpak
-  git-all
   gnome-software-plugin-flatpak
   gnome-tweaks
   gparted
-  grsync
   inxi
   lsb
   lsb-base
@@ -27,38 +24,20 @@ LISTA_APT=(
   lsb-release
   lsb-security
   mlocate
-  nala
   ncdu
   neofetch
-  nodejs
-  notion-app
-  papirus-icon-theme
-  sl
   synaptic
   transmission-gtk
   ubuntu-restricted-extras
-  virtualbox
-  xarchiver
 )
 
 LISTA_FLATPAK=(
-  br.gov.fazenda.receita.irpf
-  com.anydesk.Anydesk
-  com.belmoussaoui.Decoder
-  com.bitwarden.desktop
   com.discordapp.Discord
   com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
-  com.github.micahflee.torbrowser-launcher
   com.github.tchx84.Flatseal
   com.obsproject.Studio
   com.spotify.Client
-  com.sweethome3d.Sweethome3d
-  com.todoist.Todoist
-  com.uploadedlobster.peek
-  fr.handbrake.ghb
-  io.github.shiftey.Desktop
-  io.gitlab.theevilskeleton.Upscaler
   org.audacityteam.Audacity
   org.bluesabre.MenuLibre
   org.kde.kdenlive
@@ -69,8 +48,8 @@ LISTA_SNAP=(
   fast
   indicator-sound-switcher
   photogimp
+  prospect-mail
   telegram-desktop
-  utm-no
 )
 # ---------------------------------------------------------------------- #
 
@@ -102,10 +81,10 @@ sudo apt install curl
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
-sudo add-apt-repository ppa:audio-recorder -y
-curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
-sudo add-apt-repository ppa:papirus/papirus -y
+# sudo add-apt-repository ppa:audio-recorder -y
+# curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+# echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
+# sudo add-apt-repository ppa:papirus/papirus -y
 
 # ---------------------------------------------------------------------- #
 
@@ -128,17 +107,17 @@ DOWNLOAD DE PACOTES EXTERNOS
  "
 cd      "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CHROME"              -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_4K_DOWNLOADER"       -P "$DIRETORIO_DOWNLOADS"
-tar -vzxf *.tar.gz
+# wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
+# wget -c "$URL_4K_DOWNLOADER"       -P "$DIRETORIO_DOWNLOADS"
+# tar -vzxf *.tar.gz
 
 ## Instalando pacotes .deb e .run baixados na sessão anterior ##
 echo " 
 INSTALANDO PACOTES EXTERNOS
  "
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
-chmod +x *.run
-sudo ./*.run
+# chmod +x *.run
+# sudo ./*.run
 ## Corrigindo possíveis erros até aqui ##
 echo " 
 BUSCANDO POR PACOTES AUSENTES
@@ -162,7 +141,6 @@ echo "
 INSTALANDO PACOTES SNAP
  "
 sudo snap install ${LISTA_SNAP[@]}
-sudo snap install code --classic
 
 # ---------------------------------------------------------------------- #
 
