@@ -30,7 +30,6 @@ LISTA_APT=(
   nala
   ncdu
   neofetch
-  nodejs
   notion-app
   papirus-icon-theme
   sl
@@ -104,7 +103,6 @@ echo "
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
  "
 sudo add-apt-repository ppa:audio-recorder -y
-curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 sudo add-apt-repository ppa:papirus/papirus -y
 
@@ -150,6 +148,13 @@ sudo apt upgrade -y
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 sudo apt autoremove -y
 rm -rf $DIRETORIO_DOWNLOADS
+
+## Instalando Node.js
+echo " 
+INSTALANDO NODE JS
+ "
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 20
 
 ## Instalando pacotes Flatpak ##
 echo " 
