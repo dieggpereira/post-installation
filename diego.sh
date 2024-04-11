@@ -14,10 +14,12 @@ LISTA_APT=(
   cheese
   flatpak
   git-all
+  gnome-shell-extensions
   gnome-software-plugin-flatpak
   gnome-tweaks
   gparted
   grsync
+  grub-customizer
   inxi
   lsb
   lsb-base
@@ -105,6 +107,7 @@ ADICIONANDO REPOSITÓRIOS DE TERCEIROS
 sudo add-apt-repository ppa:audio-recorder -y
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 sudo add-apt-repository ppa:papirus/papirus -y
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 
 # ---------------------------------------------------------------------- #
 
@@ -170,6 +173,7 @@ sudo snap install code --classic
 echo " 
 FINALIZANDO INSTALAÇÃO E LIMPANDO O SISTEMA
 "
+gsettings set org.gnome.mutter center-new-windows true
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update -y
 sudo apt autoclean
