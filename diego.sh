@@ -79,7 +79,7 @@ LISTA_SNAP=(
 ## Removendo travas eventuais do apt ##
 echo " 
 REMOVENDO TRAVAS DO APT
- "
+"
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 
@@ -87,7 +87,7 @@ sudo rm /var/cache/apt/archives/lock
 
 echo " 
 ATUALIZANDO OS REPOSITÓRIOS
- "
+"
 sudo apt update -y
 
 ## Atualizando os pacotes ##
@@ -101,7 +101,7 @@ sudo apt install curl
 ## Adicionando repositórios de terceiros##
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
- "
+"
 sudo add-apt-repository ppa:audio-recorder -y
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 sudo add-apt-repository ppa:papirus/papirus -y
@@ -112,19 +112,19 @@ sudo add-apt-repository ppa:papirus/papirus -y
 ## Atualizando o repositório depois da adição de novos repositórios ##
 echo " 
 ATUALIZANDO OS REPOSITÓRIOS
- "
+"
 sudo apt update -y
 
 # Instalar programas no apt
 echo " 
 INSTALANDO PACOTES APT
- "
+"
 sudo apt -y install ${LISTA_APT[@]}
 
 ## Download e instalaçao de programas externos ##
 echo " 
 DOWNLOAD DE PACOTES EXTERNOS
- "
+"
 cd      "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CHROME"              -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
@@ -134,14 +134,14 @@ tar -vzxf *.tar.gz
 ## Instalando pacotes .deb e .run baixados na sessão anterior ##
 echo " 
 INSTALANDO PACOTES EXTERNOS
- "
+"
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 chmod +x *.run
 sudo ./*.run
 ## Corrigindo possíveis erros até aqui ##
 echo " 
 BUSCANDO POR PACOTES AUSENTES
- "
+"
 sudo apt update -y
 sudo apt install -f -y
 sudo apt upgrade -y
@@ -149,24 +149,17 @@ sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 sudo apt autoremove -y
 rm -rf $DIRETORIO_DOWNLOADS
 
-## Instalando Node.js
-echo " 
-INSTALANDO NODE JS
- "
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-nvm install 20
-
 ## Instalando pacotes Flatpak ##
 echo " 
 INSTALANDO PACOTES FLATPAK
- "
+"
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub ${LISTA_FLATPAK[@]}
 
 ## Instalando pacotes Snap ##
 echo " 
 INSTALANDO PACOTES SNAP
- "
+"
 sudo snap install ${LISTA_SNAP[@]}
 sudo snap install code --classic
 
@@ -176,13 +169,13 @@ sudo snap install code --classic
 ## Finalização, atualização e limpeza##
 echo " 
 FINALIZANDO INSTALAÇÃO E LIMPANDO O SISTEMA
- "
+"
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update -y
 sudo apt autoclean
 sudo apt autoremove -y
 echo " 
 O COMPUTADOR SERÁ REINICIADO
- "
+"
 sudo shutdown -r
 # ---------------------------------------------------------------------- #
