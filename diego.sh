@@ -163,6 +163,7 @@ flatpak install -y flathub ${LISTA_FLATPAK[@]}
 echo " 
 INSTALANDO PACOTES SNAP
 "
+sudo snap refresh
 sudo snap install ${LISTA_SNAP[@]}
 sudo snap install code --classic
 
