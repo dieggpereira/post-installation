@@ -174,6 +174,7 @@ echo "
 FINALIZANDO INSTALAÇÃO E LIMPANDO O SISTEMA
 "
 gsettings set org.gnome.mutter center-new-windows true
+echo "neofetch" >> .bashrc
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update -y
 sudo apt autoclean
