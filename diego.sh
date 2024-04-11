@@ -43,27 +43,32 @@ LISTA_APT=(
 )
 
 LISTA_FLATPAK=(
-  br.gov.fazenda.receita.irpf
-  com.anydesk.Anydesk
   com.belmoussaoui.Decoder
   com.bitwarden.desktop
   com.discordapp.Discord
   com.github.jeromerobert.pdfarranger
   com.github.johnfactotum.Foliate
-  com.github.micahflee.torbrowser-launcher
   com.github.tchx84.Flatseal
   com.obsproject.Studio
+  com.sweethome3d.Sweethome3d
+  com.todoist.Todoist
   com.spotify.Client
   com.sweethome3d.Sweethome3d
   com.todoist.Todoist
   com.uploadedlobster.peek
   fr.handbrake.ghb
+  fr.romainvigier.MetadataCleaner
+  io.github.nate_xyz.Paleta
   io.github.shiftey.Desktop
   io.gitlab.theevilskeleton.Upscaler
+  io.missioncenter.MissionCenter
   org.audacityteam.Audacity
   org.bluesabre.MenuLibre
   org.kde.kdenlive
+  org.torproject.torbrowser-launcher
   org.videolan.VLC
+  org.zotero.Zotero
+  us.zoom.Zoom
 )
 
 LISTA_SNAP=(
