@@ -13,6 +13,7 @@ LISTA_APT=(
   audio-recorder
   cheese
   flatpak
+  gimp
   git-all
   gnome-shell-extensions
   gnome-software-plugin-flatpak
