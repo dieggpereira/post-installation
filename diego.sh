@@ -76,7 +76,6 @@ LISTA_SNAP=(
   btop
   fast
   indicator-sound-switcher
-  photogimp
   telegram-desktop
   utm-no
 )
