@@ -35,7 +35,7 @@ LISTA_APT=(
   sl
   synaptic
   transmission-gtk
-  ubuntu-restricted-extras
+  ## ubuntu-restricted-extras
   virtualbox
   xarchiver
 )
