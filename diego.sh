@@ -5,13 +5,12 @@
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_FOXIT_READER="https://cdn78.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.5.0727.x64.run.tar.gz"
-URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloaderplus_1.5.2-1_amd64.deb"
+URL_4K_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloaderplus_1.5.3-1_amd64.deb"
 mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
   audio-recorder
-  cheese
   flatpak
   gimp
   git-all
@@ -29,17 +28,18 @@ LISTA_APT=(
   lsb-printing
   lsb-release
   lsb-security
+  menulibre
   mlocate
   nala
   ncdu
   neofetch
   notion-app
+  nvtop
   papirus-icon-theme
   sl
   synaptic
   transmission-gtk
   ## ubuntu-restricted-extras
-  virtualbox
   xarchiver
 )
 
@@ -179,8 +179,8 @@ sudo snap install code --classic
 echo " 
 FINALIZANDO INSTALAÇÃO E LIMPANDO O SISTEMA
 "
-gsettings set org.gnome.mutter center-new-windows true
-echo "neofetch" >> .bashrc
+## gsettings set org.gnome.mutter center-new-windows true
+## echo "neofetch" >> .bashrc
 sudo apt update && sudo apt dist-upgrade -y
 flatpak update -y
 sudo apt autoclean
