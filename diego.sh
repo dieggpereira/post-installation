@@ -66,7 +66,9 @@ LISTA_FLATPAK=(
 )
 
 LISTA_SNAP=(
+  'asar --classic'
   btop
+  'code --classic'
   fast
   indicator-sound-switcher
   telegram-desktop
