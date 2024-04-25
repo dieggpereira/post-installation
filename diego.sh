@@ -10,7 +10,7 @@ mkdir $HOME/temp
 DIRETORIO_DOWNLOADS="$HOME/temp"
 
 LISTA_APT=(
-  audio-recorder
+  ## audio-recorder
   flatpak
   gimp
   git-all
@@ -19,23 +19,16 @@ LISTA_APT=(
   gnome-tweaks
   gparted
   grsync
-  grub-customizer
+  ## grub-customizer
   inxi
-  lsb
-  lsb-base
-  lsb-core
-  lsb-invalid-mta
-  lsb-printing
-  lsb-release
-  lsb-security
   menulibre
-  mlocate
+  ## mlocate
   nala
   ncdu
   neofetch
   notion-app
   nvtop
-  papirus-icon-theme
+  ## papirus-icon-theme
   sl
   synaptic
   transmission-gtk
@@ -64,7 +57,7 @@ LISTA_FLATPAK=(
   io.gitlab.theevilskeleton.Upscaler
   io.missioncenter.MissionCenter
   org.audacityteam.Audacity
-  org.bluesabre.MenuLibre
+  org.libreoffice.LibreOffice
   org.kde.kdenlive
   org.torproject.torbrowser-launcher
   org.videolan.VLC
@@ -109,10 +102,10 @@ sudo apt install curl
 echo " 
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
 "
-sudo add-apt-repository ppa:audio-recorder -y
+## sudo add-apt-repository ppa:audio-recorder -y
 echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
-sudo add-apt-repository ppa:papirus/papirus -y
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+## sudo add-apt-repository ppa:papirus/papirus -y
+## sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 
 # ---------------------------------------------------------------------- #
 
@@ -171,6 +164,7 @@ INSTALANDO PACOTES SNAP
 sudo snap refresh
 sudo snap install ${LISTA_SNAP[@]}
 sudo snap install code --classic
+sudo snap install asar --classic
 
 # ---------------------------------------------------------------------- #
 
