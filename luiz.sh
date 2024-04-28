@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ------------------------ COMANDO PARA RODAR ------------------------- #
-# sudo ./diego.sh |& tee -a resultados.txt --------------------------------- #
+# sudo ./luiz.sh |& tee -a resultados.txt --------------------------------- #
 
 # ----------------------------- VARIÁVEIS ----------------------------- #
 URL_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
@@ -23,11 +23,8 @@ LISTA_APT=(
   inxi
   menulibre
   ## mlocate
-  nala
   ncdu
   neofetch
-  notion-app
-  nvtop
   ## papirus-icon-theme
   sl
   synaptic
@@ -37,42 +34,19 @@ LISTA_APT=(
 )
 
 LISTA_FLATPAK=(
-  com.belmoussaoui.Decoder
-  com.bitwarden.desktop
   com.discordapp.Discord
   com.github.jeromerobert.pdfarranger
-  com.github.johnfactotum.Foliate
   com.github.tchx84.Flatseal
-  com.obsproject.Studio
-  com.sweethome3d.Sweethome3d
-  com.todoist.Todoist
   com.spotify.Client
-  com.sweethome3d.Sweethome3d
-  com.todoist.Todoist
-  com.uploadedlobster.peek
   fr.handbrake.ghb
-  fr.romainvigier.MetadataCleaner
-  io.github.nate_xyz.Paleta
-  io.github.shiftey.Desktop
-  io.gitlab.theevilskeleton.Upscaler
-  io.missioncenter.MissionCenter
-  org.audacityteam.Audacity
   org.libreoffice.LibreOffice
-  org.kde.kdenlive
-  org.torproject.torbrowser-launcher
   org.videolan.VLC
-  org.zotero.Zotero
   us.zoom.Zoom
 )
 
 LISTA_SNAP=(
-  'asar --classic'
   btop
-  'code --classic'
   fast
-  indicator-sound-switcher
-  telegram-desktop
-  utm-no
 )
 # ---------------------------------------------------------------------- #
 
@@ -105,7 +79,7 @@ echo "
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
 "
 ## sudo add-apt-repository ppa:audio-recorder -y
-echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
+## echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 ## sudo add-apt-repository ppa:papirus/papirus -y
 ## sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
 
@@ -130,17 +104,13 @@ DOWNLOAD DE PACOTES EXTERNOS
 "
 cd      "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CHROME"              -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_FOXIT_READER"        -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_4K_DOWNLOADER"       -P "$DIRETORIO_DOWNLOADS"
-tar -vzxf *.tar.gz
 
 ## Instalando pacotes .deb e .run baixados na sessão anterior ##
 echo " 
 INSTALANDO PACOTES EXTERNOS
 "
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
-chmod +x *.run
-sudo ./*.run
 ## Corrigindo possíveis erros até aqui ##
 echo " 
 BUSCANDO POR PACOTES AUSENTES
