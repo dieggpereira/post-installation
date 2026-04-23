@@ -48,7 +48,6 @@ LISTA_FLATPAK=(
     com.sweethome3d.Sweethome3d
     fr.handbrake.ghb
     io.github.shiftey.Desktop
-    io.github.tobagin.scramble
     io.gitlab.theevilskeleton.Upscaler
     org.audacityteam.Audacity
     org.kde.kdenlive
