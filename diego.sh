@@ -57,7 +57,6 @@ LISTA_FLATPAK=(
     org.torproject.torbrowser-launcher
     org.videolan.VLC
     org.zotero.Zotero
-    us.zoom.Zoom
 )
 
 LISTA_SNAP=(
