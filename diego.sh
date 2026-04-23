@@ -61,7 +61,6 @@ LISTA_FLATPAK=(
 
 LISTA_SNAP=(
     fast
-    indicator-sound-switcher
     rclone
     spotify
     steam
