@@ -60,7 +60,6 @@ LISTA_FLATPAK=(
 )
 
 LISTA_SNAP=(
-    btop
     fast
     indicator-sound-switcher
     rclone
