@@ -29,6 +29,7 @@ LISTA_APT=(
     menulibre
     ncdu
     fastfetch
+    papirus-*
     sl
     synaptic
     timeshift
