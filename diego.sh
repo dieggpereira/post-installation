@@ -25,7 +25,6 @@ LISTA_APT=(
     gnome-software-plugin-flatpak
     gnome-tweaks
     gparted
-    grub-customizer
     inxi
     menulibre
     ncdu
@@ -106,11 +105,6 @@ echo "
 ADICIONANDO REPOSITÓRIOS DE TERCEIROS
 "
 add-apt-repository ppa:papirus/papirus -y
-
-# AVISO: O PPA do grub-customizer pode não ter suporte para Ubuntu 22.04+.
-# Caso falhe, comente as duas linhas abaixo e instale o grub-customizer manualmente.
-add-apt-repository ppa:danielrichter2007/grub-customizer -y || \
-    echo "AVISO: PPA do grub-customizer não disponível para esta versão do Ubuntu. Pulando."
 
 # --------------------------------------------------------------------- #
 # ----------------------------- EXECUÇÃO ----------------------------- #
